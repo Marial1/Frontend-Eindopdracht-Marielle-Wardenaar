@@ -1,0 +1,269 @@
+/* dit zorgt ervoor dat de website responsive wordt bij een breedte van 960 */
+@media screen and (min-width: 960px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* sterretje roept alles op in de html */
+* {
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box; /* als je border box op een element zet, zal de padding en de border geen invloed meer uitoefenen op de width. */
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    color: aliceblue;
+}
+
+nav a:hover {
+    color: black;
+    background-color: aliceblue;
+}
+
+input:focus {
+    color: white;
+    background-color: darkgrey;
+}
+
+input {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea:focus {
+    background-color: darkgray;
+    color: white;
+}
+
+textarea {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 1em;
+}
+
+h3 {
+    margin: 0.5em;
+}
+
+/* > geeft het eerste element aan in de body */
+/* flex zorgt ervoor dat de header op een rij staat, row-reverse dat de content omgekeerd is */
+body > header {
+    background: #B9EDFC;
+    padding: 0.5em;
+    border: 0.2em solid white;
+    width: 100%;
+    text-align: center;
+}
+
+body > header > img{
+    height: 50%;
+    width: 50%;
+}
+
+body > header > nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+body > header > nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+header > nav > ul > li:nth-child(odd) {
+    background-color: #F0CA00 ;
+    }
+
+body > header > form{
+    justify-content: flex-end;
+}
+
+body > header> h1{
+    color: white;
+    font-size: 2em;
+    text-shadow: 0.125em 0.125em 0.125em yellow;
+}
+body > header > p{
+    color: white;
+}
+a[href="#elena"]{
+    color: white;
+    font-size: 0.75em;
+}
+
+body > main > h1 {
+    margin: 0.5em;
+}
+
+body > main {
+    background-color: azure;
+    border: 0.2em solid white;
+    padding: 0.5em;
+    margin: 0.2em;
+    width: 100%;
+}
+
+body > main > form {
+    margin: 1em;
+    background: #B9EDFC;
+}
+
+body > main > form > fieldset > legend {
+    margin: 0.2em;
+}
+
+body > main > form > fieldset:first-child {
+    margin: 1em;
+    border: 0;
+}
+
+
+body > section > article {
+    border: dotted 0.1em;
+    display: inline-block;
+    margin: 0.1em;
+    padding: 0.3em;
+    width: 19%;
+}
+
+#naastelkaar {
+    display: flex;
+}
+
+.related {
+    background: #B9EDFC;
+    padding: 0.5em;
+    border: 0.2em solid white;
+    width: 50%;
+    padding: 0.5em;
+}
+
+.related > article{
+    width: 100%;
+    padding: 0.5em;
+    border: 0.1em solid white;
+    max-height: 20em;
+    overflow: hidden;
+
+}
+
+aside {
+    background: #B9EDFC;
+    padding: 0.5em;
+    border: 0.2em solid white;
+    width: 50%;
+    padding: 0.5em;
+}
+
+aside > section > article {
+    padding: 0.5em;
+    border: 0.1em solid white;
+}
+
+body > footer {
+    background-color: azure;
+    color: black;
+    justify-content: center;
+}
+
+#sitemap {
+flex-basis: 100%;
+}
+
+#sitemap > ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#sitemap  ul  li  a  {
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin: 3em;
+}
+
+legend {
+    font-size: 3.0vh;
+    margin-top: 2em;
+}
+
+
+
+
+/*TABLET*/
+@media only screen and (min-width: 501px )and (max-width: 1023px) {
+    h1 {
+    font-size: 0.8em;
+    }
+
+    #naastelkaar {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    }
+
+    body {
+        background-color: red;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .related {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+
+    .related > article{
+        width: 100%;
+    }
+    body > footer {
+    display: none;
+    }
+}
+
+/*PHONE*/
+@media only screen and (max-width: 500px) {
+    h1 {
+    font-size: 0.8em;
+    }
+
+    #naastelkaar {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    }
+
+    body {
+        background-color: red;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .related {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+
+    .related > article{
+        width: 100%;
+    }
+    body > footer {
+    display: none;
+    }
+}

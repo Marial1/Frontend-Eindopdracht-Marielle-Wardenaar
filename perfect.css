@@ -1,0 +1,270 @@
+/* sterretje roept alles op in html */
+/* als je border box op een element zet, zal de padding en de border geen invloed meer uitoefenen op de width. */
+* {
+    box-sizing: border-box;
+    font-family: Open Sans;
+}
+
+#naastelkaar {
+    display: flex;
+}
+
+#tablet {
+    display: flex;
+}
+
+a:hover {
+    color: aliceblue;
+}
+
+nav a:hover {
+    background-color: aliceblue;
+}
+
+h1 {
+    color: #cfb6ff;
+    font-size: 3.2vw;
+    border: 0.12em dotted white; /* de rand om het tekstvak */
+    border-radius: 4.37em 1.25em 4.37em; /* de hoeken van de rand om het tekstvak */
+    text-align: center; /* tekst in het midden */
+    text-shadow: 0.06em 0.06em 0.06em yellow; /* de schaduw achter de tekst is geel */
+    transform: rotate(3deg); /* geeft de border een andere wending, idg draait hij hem iets */
+}
+
+body > #naastelkaar > #tablet > header {
+    background: #B9EDFC;
+    padding: 0.5em;
+    border: 0.2em solid white;
+    width: 25%;
+    text-align: center;
+    padding: 0.5em;
+}
+
+body > #naastelkaar > #tablet > header > img {
+    height: 50%;
+    width: 50%;
+    transition: width 0.3s ease;
+}
+
+body > #naastelkaar > #tablet > header > img:hover {
+
+    width: 100%;
+
+}
+
+body > #naastelkaar > #tablet > header > nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+body > #naastelkaar > #tablet > header > nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+/*  alle oneven list items */
+header > nav > ul > li:nth-child(odd) {
+        background-color: #F0CA00 ;
+    }
+
+header > form > button {
+    transform: rotate(180deg);
+    }
+
+ a[href="#Elena"] {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 20%;
+ }
+
+body > #naastelkaar > #tablet > main {
+    background-color: azure;
+    border: 0.2em solid white;
+    padding: 0.5em;
+    width: 75%;
+}
+
+body >  #naastelkaar > aside {
+    background: #B9EDFC;
+    border: 0.2em solid white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    width: 25%;
+}
+
+body >  #naastelkaar > aside > section > article {
+    padding: 0.5em;
+    border: 0.1em solid white;
+}
+
+#open {
+    width: 10%;
+    height: 10%;
+    background-color: #cd48e8;
+    border-radius: 50%;
+    border-color: #cd48e8;
+    display: none;
+}
+
+.close {
+    width: 10%;
+    height: 10%;
+    background-color: #cd48e8;
+    border-radius: 50%;
+    border-color: #cd48e8;
+}
+
+.related {
+    border: 0.2em solid white;
+    background: #B9EDFC;
+}
+
+.related > h2 {
+    text-align: center;
+    background: #B9EDFC;
+}
+
+.related > article {
+    background: #B9EDFC;;
+    display: inline-block;
+    border: 0.1em solid pink;
+    padding: 0.5em;
+    height: 20em;
+    width: 18%;
+ }
+
+body > footer {
+    background-color: azure;
+    color: black;
+    justify-content: center;
+}
+
+#sitemap {
+flex-basis: 100%;
+}
+
+#sitemap > ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#sitemap  ul  li  a  {
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    margin: 3em;
+}
+
+video {
+    width: 100%;
+}
+
+picture {
+    width: 100%;
+}
+
+/* dit zorgt ervoor dat de website responsive wordt bij een breedte van 960 */
+@media only screen and (min-width:960px) {
+body{
+background-color: pink;
+}
+}
+
+/*TABLET*/
+@media only screen and (min-width: 501px )and (max-width: 1023px) {
+
+    h1 {
+    font-size: 0.8em;
+    }
+
+    #naastelkaar {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    }
+
+    body > #naastelkaar > #tablet > header {
+        width: 45%;
+    }
+
+    body > #naastelkaar > #tablet > main {
+        width: 55%;
+    }
+
+    body >  #naastelkaar > aside {
+        width: 100%;
+    }
+
+    body {
+        background-color: red;
+    }
+
+    .related {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+
+    .related > article{
+        width: 100%;
+    }
+    body > footer {
+    display: none;
+    }
+}
+
+/*PHONE*/
+@media only screen and (max-width: 500px) {
+
+    h1 {
+    font-size: 0.8em;
+    }
+
+    #naastelkaar {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    #tablet {
+     display: flex;
+    flex-direction: column;
+    }
+
+    body > #naastelkaar > #tablet > header {
+        width: 100%;
+    }
+
+    body > #naastelkaar > #tablet > main {
+        width: 100%;
+    }
+
+    body >  #naastelkaar > aside {
+        width: 100%;
+    }
+
+    .related {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+
+    .related > article{
+        width: 100%;
+    }
+
+   body {
+        background-color: yellow;
+    }
+   body > footer {
+    display: none;
+    }
+}
